@@ -1,0 +1,6 @@
+START,STOP,PATIENT,ENCOUNTER,CODE,SYSTEM,DESCRIPTION,TYPE,CATEGORY,REACTION1,DESCRIPTION1,SEVERITY1,REACTION2,DESCRIPTION2,SEVERITY2
+1980-06-08,,e6d92627-97d0-4a15-e724-a572779efe5d,fcd50ddc-e0c1-b405-3d5f-126bedd7d12b,419199007,Unknown,Allergy to substance (finding),allergy,environment,,,,,,
+1980-06-08,,e6d92627-97d0-4a15-e724-a572779efe5d,fcd50ddc-e0c1-b405-3d5f-126bedd7d12b,264287008,Unknown,Animal dander (substance),allergy,environment,878820003,Rhinoconjunctivitis (disorder),MODERATE,271807003,Eruption of skin (disorder),MILD
+1980-06-08,,e6d92627-97d0-4a15-e724-a572779efe5d,fcd50ddc-e0c1-b405-3d5f-126bedd7d12b,29046,Unknown,Lisinopril,intolerance,medication,,,,,,
+1980-06-08,,e6d92627-97d0-4a15-e724-a572779efe5d,fcd50ddc-e0c1-b405-3d5f-126bedd7d12b,1191,Unknown,Aspirin,allergy,medication,,,,,,
+1980-06-08,,e6d92627-97d0-4a15-e724-a572779efe5d,fcd50ddc-e0c1-b405-3d5f-126bedd7d12b,412071004,Unknown,Wheat (substance),allergy,food,271807003,Eruption of skin (disorder),MODERATE,,,

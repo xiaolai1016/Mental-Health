@@ -1,0 +1,20 @@
+Id,START,STOP,PATIENT,ENCOUNTER,CODE,DESCRIPTION,REASONCODE,REASONDESCRIPTION
+439a3e4d-3006-6705-399b-1e92ac4cd886,2015-02-03,2015-05-20,afcc9789-8930-c566-8263-54eff69cccb0,e452b3f8-e159-a3a9-67e7-395a2525821e,385691007,Fracture care,16114001,Fracture of ankle
+400b0804-d9b7-c588-55c3-4a0be16d10d4,2016-10-18,2016-12-03,afcc9789-8930-c566-8263-54eff69cccb0,01a6dd03-e6ad-736e-cd0a-76ae7f00e82a,53950000,Respiratory therapy,,
+43f4f156-48e3-6bfe-53f7-5caa9f6de43f,2019-05-29,2019-06-22,afcc9789-8930-c566-8263-54eff69cccb0,7605f5ae-b497-fab2-c7a1-0ce9491c7c94,225358003,Wound care,284549007,Laceration of hand
+bb67f4bb-8f33-4aff-911f-7b90a45d3818,2021-09-02,2021-09-02,afcc9789-8930-c566-8263-54eff69cccb0,ecc47e89-309e-a4bd-cdd6-df4058959e66,736376001,Infectious disease care plan (record artifact),,
+efe51a97-ce87-7eae-9450-b9b4039f919c,2021-09-02,2021-10-04,afcc9789-8930-c566-8263-54eff69cccb0,ecc47e89-309e-a4bd-cdd6-df4058959e66,736376001,Infectious disease care plan (record artifact),,
+7014935b-50b4-a271-7b61-8d11301d4fcc,2022-12-16,,2d9be839-252a-a755-60a2-ec34975efc4d,ceada3a8-b79a-2fff-4efb-15ffcd3dbc63,698360004,Diabetes self management plan,15777000,Prediabetes
+2b0346eb-23e3-9eca-481e-142cc019b09f,2014-03-27,,279035bb-95e8-6f57-38fb-d896178c0576,f01501b7-6eeb-47e0-d84c-1f7e1c7e7e1b,276239002,Therapy (regime/therapy),,
+6a5d7f2b-9542-66f3-6c44-e5c9ad208cb2,2014-05-22,2014-12-18,279035bb-95e8-6f57-38fb-d896178c0576,d9d62522-5dbd-b1ab-3b6c-42d60601be62,134435003,Routine antenatal care,,
+2a5a1f50-a224-5153-1ed1-d5441e7fcc24,2017-04-06,2017-11-02,279035bb-95e8-6f57-38fb-d896178c0576,a5ece676-df52-8ab2-985f-dad97525df91,134435003,Routine antenatal care,,
+aa1168fe-cf74-a6f0-6ebc-e923568aef2d,2018-03-08,,279035bb-95e8-6f57-38fb-d896178c0576,35571625-e307-35a2-c85e-f9c29c898555,698360004,Diabetes self management plan,15777000,Prediabetes
+54b5ed94-fa2d-5555-fdcc-9f5d28f87efc,2003-04-26,,68a357de-c231-78c7-8150-582cb707daaa,503f51e5-3b3e-6edf-12da-7b0a703db00f,412776001,Chronic obstructive pulmonary disease clinical management plan,87433001,Pulmonary emphysema (disorder)
+6e7553c6-c719-b194-b8c4-0a1c6b10460b,2004-06-19,,68a357de-c231-78c7-8150-582cb707daaa,cc29f1b4-f76e-8385-bc9d-d28c7a47b742,443402002,Lifestyle education regarding hypertension,59621000,Essential hypertension (disorder)
+07426edb-f79d-1d44-56ad-226930c93bbe,1966-04-09,,0b001734-a9ac-59dd-4631-436c936f5ab9,62c6bf07-e9c3-fd6c-060c-b34513b14a6b,443402002,Lifestyle education regarding hypertension,59621000,Essential hypertension (disorder)
+8fd42145-e1d3-2625-b812-3935fe0f53e8,1985-02-27,,0b001734-a9ac-59dd-4631-436c936f5ab9,34ff9244-84fd-23c3-ac76-0b2428f8b028,734163000,Care plan (record artifact),73430006,Sleep apnea (disorder)
+e8b6b6ad-c75f-042d-3d26-a3b49de6ca1b,2001-10-20,,0b001734-a9ac-59dd-4631-436c936f5ab9,388007dc-21cc-0b58-e7eb-5dbf7b0f21e6,736285004,Hyperlipidemia clinical management plan,55822004,Hyperlipidemia
+b2a71895-18ef-5ed7-0885-53710a8aa735,2005-12-06,,0b001734-a9ac-59dd-4631-436c936f5ab9,ad8ca77c-38b6-1e73-4099-cccdfa457522,736690008,Dialysis care plan (record artifact),,
+7c8f8103-65ff-9c47-5ec7-fea12da018b5,2014-03-08,,0b001734-a9ac-59dd-4631-436c936f5ab9,544d15c6-8586-b6c2-1dda-b25c01c98c28,276239002,Therapy (regime/therapy),,
+78b7889e-58eb-513e-9d1d-73936be064da,1980-05-28,,e6d92627-97d0-4a15-e724-a572779efe5d,452eaafe-a1a5-0521-8737-ed3b05938c4e,384758001,Self-care interventions (procedure),,
+5c884771-9106-3780-38aa-8da98bd6944d,2004-06-19,,e6d92627-97d0-4a15-e724-a572779efe5d,64408bc1-c6f9-a5af-1e82-8a9203771f07,698360004,Diabetes self management plan,15777000,Prediabetes

@@ -1,0 +1,77 @@
+DATE,PATIENT,ENCOUNTER,CODE,DESCRIPTION,BASE_COST
+2014-11-22T03:23:35Z,afcc9789-8930-c566-8263-54eff69cccb0,9ddfc96d-8f69-71dd-ccf9-186b40fb69ba,140,Influenza  seasonal  injectable  preservative free,136.00
+2014-11-14T19:14:15Z,2d9be839-252a-a755-60a2-ec34975efc4d,bc1c3e1b-2f82-6001-34c5-9c7ccb623b6d,140,Influenza  seasonal  injectable  preservative free,136.00
+2015-11-20T19:14:15Z,2d9be839-252a-a755-60a2-ec34975efc4d,c4d578aa-901f-6d3e-1516-f2fb085ed1b1,140,Influenza  seasonal  injectable  preservative free,136.00
+2015-11-28T03:23:35Z,afcc9789-8930-c566-8263-54eff69cccb0,3c88ebe9-ed77-e4e8-2813-e64033c659c9,140,Influenza  seasonal  injectable  preservative free,136.00
+2015-11-28T03:23:35Z,afcc9789-8930-c566-8263-54eff69cccb0,3c88ebe9-ed77-e4e8-2813-e64033c659c9,114,meningococcal MCV4P,136.00
+2016-11-25T19:14:15Z,2d9be839-252a-a755-60a2-ec34975efc4d,ce892c40-f385-9a89-0aeb-5b4223faa39d,140,Influenza  seasonal  injectable  preservative free,136.00
+2016-11-25T19:14:15Z,2d9be839-252a-a755-60a2-ec34975efc4d,ce892c40-f385-9a89-0aeb-5b4223faa39d,114,meningococcal MCV4P,136.00
+2016-10-29T03:23:35Z,afcc9789-8930-c566-8263-54eff69cccb0,ceb9b244-2190-5287-03ac-e934629c70c1,140,Influenza  seasonal  injectable  preservative free,136.00
+2017-12-01T19:14:15Z,2d9be839-252a-a755-60a2-ec34975efc4d,1a3337ec-b51a-cbd0-a9c8-8d3684df1c3e,140,Influenza  seasonal  injectable  preservative free,136.00
+2018-12-07T19:14:15Z,2d9be839-252a-a755-60a2-ec34975efc4d,a791951f-4157-cb19-ec58-7a0dffd2e763,140,Influenza  seasonal  injectable  preservative free,136.00
+2017-12-09T03:23:35Z,afcc9789-8930-c566-8263-54eff69cccb0,93fe9b5e-86cd-e637-066f-e96d90292c27,140,Influenza  seasonal  injectable  preservative free,136.00
+2019-12-13T19:14:15Z,2d9be839-252a-a755-60a2-ec34975efc4d,b4350ef3-d39e-9120-07ea-350a573023b9,140,Influenza  seasonal  injectable  preservative free,136.00
+2021-04-09T19:14:15Z,2d9be839-252a-a755-60a2-ec34975efc4d,2d6bd338-004d-a795-3f73-706a09462129,207,COVID-19  mRNA  LNP-S  PF  100 mcg/0.5mL dose or 50 mcg/0.25mL dose,136.00
+2018-12-15T03:23:35Z,afcc9789-8930-c566-8263-54eff69cccb0,61aca6aa-392a-59c2-07f1-c48759cfd452,140,Influenza  seasonal  injectable  preservative free,136.00
+2021-05-07T19:14:15Z,2d9be839-252a-a755-60a2-ec34975efc4d,8f26403f-ecf5-8e69-5d92-c25c3cc82b29,207,COVID-19  mRNA  LNP-S  PF  100 mcg/0.5mL dose or 50 mcg/0.25mL dose,136.00
+2022-12-16T19:14:15Z,2d9be839-252a-a755-60a2-ec34975efc4d,ceada3a8-b79a-2fff-4efb-15ffcd3dbc63,140,Influenza  seasonal  injectable  preservative free,136.00
+2022-12-16T19:14:15Z,2d9be839-252a-a755-60a2-ec34975efc4d,ceada3a8-b79a-2fff-4efb-15ffcd3dbc63,113,Td (adult)  5 Lf tetanus toxoid  preservative free  adsorbed,136.00
+2022-12-16T19:14:15Z,2d9be839-252a-a755-60a2-ec34975efc4d,ceada3a8-b79a-2fff-4efb-15ffcd3dbc63,43,Hep B  adult,136.00
+2022-12-16T19:14:15Z,2d9be839-252a-a755-60a2-ec34975efc4d,ceada3a8-b79a-2fff-4efb-15ffcd3dbc63,114,meningococcal MCV4P,136.00
+2021-12-18T03:23:35Z,afcc9789-8930-c566-8263-54eff69cccb0,eac81ba0-a3a0-034d-3bfa-db8e0722899b,140,Influenza  seasonal  injectable  preservative free,136.00
+2021-12-18T03:23:35Z,afcc9789-8930-c566-8263-54eff69cccb0,eac81ba0-a3a0-034d-3bfa-db8e0722899b,113,Td (adult)  5 Lf tetanus toxoid  preservative free  adsorbed,136.00
+2021-12-18T03:23:35Z,afcc9789-8930-c566-8263-54eff69cccb0,eac81ba0-a3a0-034d-3bfa-db8e0722899b,43,Hep B  adult,136.00
+2021-12-18T03:23:35Z,afcc9789-8930-c566-8263-54eff69cccb0,eac81ba0-a3a0-034d-3bfa-db8e0722899b,114,meningococcal MCV4P,136.00
+2015-02-19T00:54:56Z,279035bb-95e8-6f57-38fb-d896178c0576,180740b4-9a74-d0b0-1383-0c71152b4cef,140,Influenza  seasonal  injectable  preservative free,136.00
+2015-02-19T00:54:56Z,279035bb-95e8-6f57-38fb-d896178c0576,180740b4-9a74-d0b0-1383-0c71152b4cef,113,Td (adult)  5 Lf tetanus toxoid  preservative free  adsorbed,136.00
+2016-02-25T00:54:56Z,279035bb-95e8-6f57-38fb-d896178c0576,54b7790a-b1ee-0c88-baad-b2cd85fc869b,140,Influenza  seasonal  injectable  preservative free,136.00
+2017-03-02T00:54:56Z,279035bb-95e8-6f57-38fb-d896178c0576,f357c322-6c73-89d5-e62b-5a4b82034818,140,Influenza  seasonal  injectable  preservative free,136.00
+2018-03-08T00:54:56Z,279035bb-95e8-6f57-38fb-d896178c0576,35571625-e307-35a2-c85e-f9c29c898555,140,Influenza  seasonal  injectable  preservative free,136.00
+2019-03-14T00:54:56Z,279035bb-95e8-6f57-38fb-d896178c0576,8f89c849-b9c1-7185-6244-7dd6fbe42947,140,Influenza  seasonal  injectable  preservative free,136.00
+2020-03-19T00:54:56Z,279035bb-95e8-6f57-38fb-d896178c0576,40c7e7d6-fcb0-b0e8-308e-242bee5a8075,140,Influenza  seasonal  injectable  preservative free,136.00
+2021-03-25T00:54:56Z,279035bb-95e8-6f57-38fb-d896178c0576,d5a86f22-6ba5-f0b3-d7cd-d1cc0447732a,140,Influenza  seasonal  injectable  preservative free,136.00
+2021-05-27T00:54:56Z,279035bb-95e8-6f57-38fb-d896178c0576,f7a1a1cc-3a07-a7c8-153c-38130515121c,207,COVID-19  mRNA  LNP-S  PF  100 mcg/0.5mL dose or 50 mcg/0.25mL dose,136.00
+2021-06-24T00:54:56Z,279035bb-95e8-6f57-38fb-d896178c0576,9c8203c2-90df-fa58-0bd2-898092144fa6,207,COVID-19  mRNA  LNP-S  PF  100 mcg/0.5mL dose or 50 mcg/0.25mL dose,136.00
+2022-03-31T00:54:56Z,279035bb-95e8-6f57-38fb-d896178c0576,ab3029ab-de9e-0149-5beb-cde3be3e936f,140,Influenza  seasonal  injectable  preservative free,136.00
+2023-04-06T00:54:56Z,279035bb-95e8-6f57-38fb-d896178c0576,632cef70-7c05-42c6-e755-a3c27fbea688,140,Influenza  seasonal  injectable  preservative free,136.00
+2024-04-11T00:54:56Z,279035bb-95e8-6f57-38fb-d896178c0576,ea3f5a3f-b4e1-b0b4-90a9-b169b738f81f,140,Influenza  seasonal  injectable  preservative free,136.00
+2024-04-11T00:54:56Z,279035bb-95e8-6f57-38fb-d896178c0576,ea3f5a3f-b4e1-b0b4-90a9-b169b738f81f,52,Hep A  adult,136.00
+1997-06-07T20:34:46Z,68a357de-c231-78c7-8150-582cb707daaa,23181b1e-d79d-3f81-e88a-20c4550505b1,140,Influenza  seasonal  injectable  preservative free,136.00
+1998-06-13T20:34:46Z,68a357de-c231-78c7-8150-582cb707daaa,3c1e8a40-1f28-881b-dd44-f3c2b2cb89e7,140,Influenza  seasonal  injectable  preservative free,136.00
+2001-06-16T20:34:46Z,68a357de-c231-78c7-8150-582cb707daaa,f5812cc4-4cd0-2b88-221b-ea668dc8f54c,140,Influenza  seasonal  injectable  preservative free,136.00
+2001-06-16T20:34:46Z,68a357de-c231-78c7-8150-582cb707daaa,f5812cc4-4cd0-2b88-221b-ea668dc8f54c,113,Td (adult)  5 Lf tetanus toxoid  preservative free  adsorbed,136.00
+2001-06-16T20:34:46Z,68a357de-c231-78c7-8150-582cb707daaa,f5812cc4-4cd0-2b88-221b-ea668dc8f54c,43,Hep B  adult,136.00
+2003-04-26T20:34:46Z,68a357de-c231-78c7-8150-582cb707daaa,503f51e5-3b3e-6edf-12da-7b0a703db00f,140,Influenza  seasonal  injectable  preservative free,136.00
+2003-04-26T20:34:46Z,68a357de-c231-78c7-8150-582cb707daaa,503f51e5-3b3e-6edf-12da-7b0a703db00f,43,Hep B  adult,136.00
+2004-06-19T20:34:46Z,68a357de-c231-78c7-8150-582cb707daaa,cc29f1b4-f76e-8385-bc9d-d28c7a47b742,140,Influenza  seasonal  injectable  preservative free,136.00
+2005-06-25T20:34:46Z,68a357de-c231-78c7-8150-582cb707daaa,829921db-acc4-9f12-36f7-addb78ff9b43,140,Influenza  seasonal  injectable  preservative free,136.00
+2006-07-01T20:34:46Z,68a357de-c231-78c7-8150-582cb707daaa,010959c8-9078-cc55-8048-ad4fd0d55628,140,Influenza  seasonal  injectable  preservative free,136.00
+2015-01-10T09:47:59Z,0b001734-a9ac-59dd-4631-436c936f5ab9,59efe740-cc6b-092d-0f3a-e711bec666ed,140,Influenza  seasonal  injectable  preservative free,136.00
+2015-01-10T09:47:59Z,0b001734-a9ac-59dd-4631-436c936f5ab9,59efe740-cc6b-092d-0f3a-e711bec666ed,33,pneumococcal polysaccharide vaccine  23 valent,136.00
+2016-01-16T09:47:59Z,0b001734-a9ac-59dd-4631-436c936f5ab9,716adce0-a7c0-9351-883e-f0c4b5bdc950,140,Influenza  seasonal  injectable  preservative free,136.00
+2017-01-21T09:47:59Z,0b001734-a9ac-59dd-4631-436c936f5ab9,93aff80f-ec73-8829-2e36-30b2d2232699,140,Influenza  seasonal  injectable  preservative free,136.00
+2018-01-27T09:47:59Z,0b001734-a9ac-59dd-4631-436c936f5ab9,a26ca9f7-ceab-564a-088c-3c9245106107,140,Influenza  seasonal  injectable  preservative free,136.00
+2019-02-02T09:47:59Z,0b001734-a9ac-59dd-4631-436c936f5ab9,3e5627cf-ac1e-d8e8-7588-16a9eb0fa643,140,Influenza  seasonal  injectable  preservative free,136.00
+2020-02-08T09:47:59Z,0b001734-a9ac-59dd-4631-436c936f5ab9,d404d356-9bb9-9dca-7868-489c81c3ac7b,140,Influenza  seasonal  injectable  preservative free,136.00
+2020-02-08T09:47:59Z,0b001734-a9ac-59dd-4631-436c936f5ab9,d404d356-9bb9-9dca-7868-489c81c3ac7b,113,Td (adult)  5 Lf tetanus toxoid  preservative free  adsorbed,136.00
+2021-02-13T09:47:59Z,0b001734-a9ac-59dd-4631-436c936f5ab9,379514b3-4b93-2e31-6181-9e4b156d693d,140,Influenza  seasonal  injectable  preservative free,136.00
+2021-08-28T09:47:59Z,0b001734-a9ac-59dd-4631-436c936f5ab9,ae77eed6-fcd1-404e-9719-dd2cbf7ed74e,207,COVID-19  mRNA  LNP-S  PF  100 mcg/0.5mL dose or 50 mcg/0.25mL dose,136.00
+2021-09-25T09:47:59Z,0b001734-a9ac-59dd-4631-436c936f5ab9,ee431547-4d0b-39f2-4126-f74d680eeb8f,207,COVID-19  mRNA  LNP-S  PF  100 mcg/0.5mL dose or 50 mcg/0.25mL dose,136.00
+2015-07-11T20:34:46Z,e6d92627-97d0-4a15-e724-a572779efe5d,a944dec9-3f9a-4e1f-82c4-cc75bdcfb7e7,140,Influenza  seasonal  injectable  preservative free,136.00
+2016-07-16T20:34:46Z,e6d92627-97d0-4a15-e724-a572779efe5d,7c328b6e-df98-b696-8b43-01f04b3075c0,140,Influenza  seasonal  injectable  preservative free,136.00
+2022-02-19T09:47:59Z,0b001734-a9ac-59dd-4631-436c936f5ab9,711b778e-d2c6-b802-2632-672dd6352dc9,140,Influenza  seasonal  injectable  preservative free,136.00
+2017-07-22T20:34:46Z,e6d92627-97d0-4a15-e724-a572779efe5d,b3b98131-b85c-590c-f491-f7907b69480e,140,Influenza  seasonal  injectable  preservative free,136.00
+2018-07-28T20:34:46Z,e6d92627-97d0-4a15-e724-a572779efe5d,b427b138-8cb0-4029-20ed-4d24ae34add9,140,Influenza  seasonal  injectable  preservative free,136.00
+2022-11-05T09:47:59Z,0b001734-a9ac-59dd-4631-436c936f5ab9,7821b03e-bd2a-2fda-d59b-9de50217c49f,140,Influenza  seasonal  injectable  preservative free,136.00
+2019-08-03T20:34:46Z,e6d92627-97d0-4a15-e724-a572779efe5d,23cd3fb8-d16e-2382-2448-6078ea9030d6,140,Influenza  seasonal  injectable  preservative free,136.00
+2019-08-03T20:34:46Z,e6d92627-97d0-4a15-e724-a572779efe5d,23cd3fb8-d16e-2382-2448-6078ea9030d6,52,Hep A  adult,136.00
+2020-08-08T20:34:46Z,e6d92627-97d0-4a15-e724-a572779efe5d,87dacf85-46f4-614f-ab30-72166d72d03c,140,Influenza  seasonal  injectable  preservative free,136.00
+2020-08-08T20:34:46Z,e6d92627-97d0-4a15-e724-a572779efe5d,87dacf85-46f4-614f-ab30-72166d72d03c,113,Td (adult)  5 Lf tetanus toxoid  preservative free  adsorbed,136.00
+2020-08-08T20:34:46Z,e6d92627-97d0-4a15-e724-a572779efe5d,87dacf85-46f4-614f-ab30-72166d72d03c,52,Hep A  adult,136.00
+2021-06-05T20:34:46Z,e6d92627-97d0-4a15-e724-a572779efe5d,2e62f705-cfa5-dfc5-675d-861ed3176898,208,COVID-19  mRNA  LNP-S  PF  30 mcg/0.3 mL dose,136.00
+2021-06-26T20:34:46Z,e6d92627-97d0-4a15-e724-a572779efe5d,26115d3f-7f53-699f-dde1-72d4c27c2093,208,COVID-19  mRNA  LNP-S  PF  30 mcg/0.3 mL dose,136.00
+2021-08-14T20:34:46Z,e6d92627-97d0-4a15-e724-a572779efe5d,0010a996-0b3b-2978-3797-b89247a33593,140,Influenza  seasonal  injectable  preservative free,136.00
+2022-08-20T20:34:46Z,e6d92627-97d0-4a15-e724-a572779efe5d,173342da-8911-440b-8dcd-33861ccedb79,140,Influenza  seasonal  injectable  preservative free,136.00
+2023-08-26T20:34:46Z,e6d92627-97d0-4a15-e724-a572779efe5d,528ad1bb-06a5-ce5a-575d-9f2db9738de3,140,Influenza  seasonal  injectable  preservative free,136.00
+2024-08-31T20:34:46Z,e6d92627-97d0-4a15-e724-a572779efe5d,427318ab-5962-9096-d873-5606d57c61e2,140,Influenza  seasonal  injectable  preservative free,136.00
+2024-04-06T09:47:59Z,0b001734-a9ac-59dd-4631-436c936f5ab9,14b12450-85a5-ed88-3231-bf2f4bfe44eb,140,Influenza  seasonal  injectable  preservative free,136.00

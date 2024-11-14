@@ -1,0 +1,302 @@
+---
+title: "Patient Pathway"
+author: "Xiao Lai"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+# Load necessary library
+library(tidyverse)  # Includes the read_csv function
+library(RColorBrewer)
+
+# Specify the directory containing your CSV files
+directory_path <- "File Path"
+
+# Get a list of all CSV files in the directory
+csv_files <- list.files(path = directory_path, pattern = "\\.csv$", full.names = TRUE)
+
+# Loop over each file and read it into an individual data frame
+for (file in csv_files) {
+  # Create a data frame name based on the file name
+  data_name <- tools::file_path_sans_ext(basename(file))
+  
+  # Read the file and assign it to a data frame with the generated name
+  assign(data_name, read_csv(file))
+  
+}
+
+```
+
+```{r}
+encounters$ENCOUNTERCLASS = as.factor(encounters$ENCOUNTERCLASS)
+encounters$DESCRIPTION = as.factor(encounters$DESCRIPTION)
+encounters$REASONDESCRIPTION = as.factor(encounters$REASONDESCRIPTION)
+#summary(encounters$ENCOUNTERCLASS)
+#summary(encounters$DESCRIPTION)
+#summary(encounters$REASONDESCRIPTION)
+#summary(encounters$START)
+#n_distinct(encounters$PATIENT)
+```
+
+```{r}
+# Load necessary library
+library(dplyr)
+encounters <- encounters %>%
+  mutate(duration_days = round(as.numeric(difftime(STOP, START, units = "mins")))) %>%
+  arrange(PATIENT, START)
+# Assuming your data frame is named "encounters"
+# Use column names directly without the 'encounters$' prefix
+
+summary_df <- encounters %>%
+  group_by(ENCOUNTERCLASS, duration_days) %>%
+  summarise(distinct_description_count = n_distinct(Id), .groups = 'drop')
+
+# View the summary
+print(summary_df)
+
+ggplot(encounters, aes(x = ENCOUNTERCLASS, y = duration_days, color = ENCOUNTERCLASS)) +
+  geom_jitter(width = 0.4, height = 0.1) +  # Jitter points to reduce overlap
+  labs(
+    title = "Duration of Encounters by Encounter Class",
+    x = "Encounter Class",
+    y = "Duration (minutes)"
+  ) +
+  theme_minimal() +
+  scale_y_log10() + 
+  scale_color_brewer(palette = "Set3") +
+  geom_hline(yintercept = 60, linetype = "dashed", color = "blue", size = 0.5) +  # One hour line
+  geom_hline(yintercept = 1440, linetype = "dashed", color = "red", size = 0.5) +  # One day line
+  theme(legend.position = "none") +
+  annotate("text", x = Inf, y = 70, label = "1 hour", hjust = 1.2, color = "blue", size = 3) +
+  annotate("text", x = Inf, y = 1700, label = "1 day", hjust = 1.2, color = "red", size = 3)
+
+# Save as PNG with 300 DPI
+#ggsave("/Users/xiaolai/Desktop/Duration of Encounters by Encounter Class.png", plot = last_plot(), #width = 10, height = 8, units = "in", dpi = 300, bg = "white")
+```
+
+```{r}
+# Calculate time difference between encounters for each patient
+encounters <- encounters %>%
+  arrange(PATIENT, START) %>%
+  group_by(PATIENT) %>%
+  mutate(time_diff = as.numeric(difftime(START, lag(STOP, default = first(START)), units = "mins")))
+
+# Plot scatter plot with adjusted spacing between encounters
+ggplot(encounters, aes(x = START, y = factor(PATIENT), color = ENCOUNTERCLASS, size = time_diff)) +
+  geom_point() +
+  labs(title = "Scatter Plot of Encounters by Patient",
+       x = "Date",
+       y = "Patient ID",
+       color = "Encounter Type",
+       size = "Time Gap (Minutes)") +
+  scale_size_continuous(range = c(1, 5)) +  # Adjust point size
+  theme_minimal() +
+  scale_color_brewer(palette = "Set3")
+# Save as PNG with 300 DPI
+#ggsave("/Users/xiaolai/Desktop/Scatter Plot of Encounters by Patient.png", plot = last_plot(), width = 10, height = 8, units = "in", dpi = 300, bg = "white")
+```
+
+```{r}
+# Create a new column to represent the time period (e.g., day or hour)
+encounters$hour <- format(encounters$START, "%H")
+
+# Count encounters by hour and encounter type
+encounters_summary <- encounters %>%
+  group_by(hour, ENCOUNTERCLASS) %>%
+  summarise(encounter_count = n())
+
+# Plot stacked bar chart of encounters by hour and encounter type
+ggplot(encounters_summary, aes(x = hour, y = encounter_count, fill = ENCOUNTERCLASS)) +
+  geom_bar(stat = "identity") +
+  labs(title = "Encounter Types by Hour",
+       x = "Hour of Day",
+       y = "Encounter Count",
+       fill = "Encounter Type") +
+  theme_minimal() +
+  scale_fill_brewer(palette = "Set3")
+# Save as PNG with 300 DPI
+#("/Users/xiaolai/Desktop/Encounter Types by Hour.png", plot = last_plot(), width = 10, height = 8, units = "in", dpi = 300, bg = "white")
+```
+
+```{r}
+#str(procedures)
+#str(encounters)
+procedures$DESCRIPTION = as.factor(procedures$DESCRIPTION)
+#summary(procedures$DESCRIPTION)
+```
+
+```{r}
+
+# Merge encounters with procedures data
+merged_data <- encounters %>%
+  inner_join(procedures, by = c("PATIENT", "Id" = "ENCOUNTER"))
+
+# Calculate the number of procedures per encounter
+encounter_procedure_counts <- merged_data %>%
+  group_by(PATIENT, Id) %>%
+  summarise(
+    duration_days = first(duration_days),  # Assume duration_days is already calculated in encounters
+    procedure_count = n()
+  ) %>% 
+  ungroup()
+
+# Join the encounter_procedure_counts with the encounters table to include ENCOUNTERCLASS
+encounter_procedure_counts <- encounter_procedure_counts %>%
+  left_join(encounters %>% select(PATIENT, Id, ENCOUNTERCLASS), by = c("PATIENT", "Id"))
+
+# Convert duration from days to minutes if necessary (not used in this plot directly)
+encounter_procedure_counts <- encounter_procedure_counts %>%
+  mutate(duration_minutes = duration_days * 1440)  # This conversion is optional for other analyses
+
+# Define a custom color palette with distinct reds, oranges, and blues
+custom_colors <- c(
+  "ambulatory" = "#045CBC",      # Deep blue for ambulatory
+  "emergency" = "#D73027",       # Bright red for emergency
+  "home" = "#FC8D59",            # Orange for home
+  "hospice" = "#E34A33",         # Deep red-orange for hospice
+  "inpatient" = "#FDAE61",       # Soft orange for inpatient
+  "outpatient" = "#F46D43",      # Coral orange for outpatient
+  "snf" = "#4575B4",             # Medium blue for SNF
+  "urgentcare" = "#A50026",      # Dark red for urgent care
+  "virtual" = "#91BFDB",         # Light blue for virtual
+  "wellness" = "#66B2FF"         # Light blue for wellness
+)
+
+# Plot with x-axis as encounter class and y-axis as procedure count
+ggplot(encounter_procedure_counts, aes(y = procedure_count, x = ENCOUNTERCLASS, color = ENCOUNTERCLASS)) +
+  geom_jitter(width = 0.2, height = 0.2, alpha = 0.7) +
+  labs(
+    title = "Number of Procedures by Encounter Class",
+    y = "Number of Procedures",
+    x = "Encounter Class",
+    color = "Encounter Class"
+  ) +
+  theme_minimal() +
+  scale_y_continuous(trans = "log2", breaks = seq(0, max(encounter_procedure_counts$procedure_count, na.rm = TRUE), by = 3)) +  # Log scale with 3-step labels
+  scale_color_manual(values = custom_colors) +  # Apply custom color palette for encounter classes
+  coord_flip()  # Flip the axes
+
+
+```
+
+```{r}
+
+# Calculate duration in minutes and arrange data
+# Calculate duration in minutes and arrange data
+encounters <- encounters %>%
+  mutate(duration_minutes = as.numeric(difftime(STOP, START, units = "mins"))) %>%
+  arrange(PATIENT, START)
+
+# Create a summary data frame
+summary_df <- encounters %>%
+  group_by(ENCOUNTERCLASS, duration_minutes) %>%
+  summarise(distinct_description_count = n_distinct(Id), .groups = 'drop')
+
+# Load necessary library for color manipulation
+library(scales)
+
+# Define the main color and generate lighter shades
+main_color <- "#045CBC"
+
+
+
+# Define custom color palette for encounter classes
+encounter_class_colors <- c(
+  "ambulatory" = "#045CBC",    # Deep blue for ambulatory 
+  "emergency" = "#D73027",     # Bright red for emergency
+  "home" = "#FC8D59",          # Orange for home
+  "hospice" = "#E34A33",       # Deep red-orange for hospice
+  "inpatient" = "#FDAE61",     # Soft orange for inpatient
+  "outpatient" = "#F46D43",    # Coral orange for outpatient
+  "snf" = "#4575B4",           # Medium blue for SNF
+  "urgentcare" = "#A50026",    # Dark red for urgent care
+  "virtual" = "#91BFDB",       # Light blue for virtual
+  "wellness" = "#66B2FF"       # Light blue for wellness
+)
+
+# Ensure all ENCOUNTERCLASS levels have a defined color
+all_classes <- unique(summary_df$ENCOUNTERCLASS)
+missing_classes <- setdiff(all_classes, names(encounter_class_colors))
+
+# Assign default colors to any missing classes
+if (length(missing_classes) > 0) {
+  additional_colors <- colorRampPalette(c("#8ABEC1", "#B3D1FF"))(length(missing_classes))
+  names(additional_colors) <- missing_classes
+  encounter_class_colors <- c(encounter_class_colors, additional_colors)
+}
+
+# Create the plot
+ggplot(encounters, aes(x = ENCOUNTERCLASS, y = duration_minutes, color = ENCOUNTERCLASS)) +
+  geom_jitter(width = 0.2, height = 0.1, size = 2, alpha = 0.6) +  # Reduced point size and increased alpha
+  labs(
+    title = "Duration of Encounters by Encounter Class",
+    x = "Encounter Class",
+    y = "Duration (minutes)"
+  ) +
+  theme_minimal() +
+  scale_y_log10(
+    breaks = c(1, 60, 1440, 7200),  # Specific breaks for log scale
+    labels = c("1 min", "1 hour", "1 day", "5 days")
+  ) +
+  scale_color_manual(values = encounter_class_colors) +  # Apply custom color palette
+  geom_hline(yintercept = 60, linetype = "dashed", color = main_color, size = 0.5) +    # One hour line
+  geom_hline(yintercept = 1440, linetype = "dashed", color = "#6BAED6", size = 0.5) +  # One day line
+  scale_x_discrete(expand = expansion(mult = c(0.3, 0.3))) +  # Increased spacing between columns
+  theme(
+    legend.position = "none",
+    text = element_text(),
+    axis.text.x = element_text(angle = 0, vjust = 0.5)
+  ) +
+  guides(x = guide_axis(n.dodge = 2)) +  # Adjust x-axis labels to prevent overlap
+  annotate("text", x = Inf, y = 70, label = "1 hour", hjust = 1.1, color = main_color, size = 4) +
+  annotate("text", x = Inf, y = 1700, label = "1 day", hjust = 1.1, color = "#6BAED6", size = 4)
+```
+
+```{r}
+
+# Create a new column to represent the time period (e.g., day or hour)
+encounters$hour <- format(encounters$START, "%H")
+
+# Count encounters by hour and encounter type
+encounters_summary <- encounters %>%
+  group_by(hour, ENCOUNTERCLASS) %>%
+  summarise(encounter_count = n(), .groups = "drop")
+
+# Calculate total counts for each encounter type to use for ordering
+total_counts <- encounters_summary %>%
+  group_by(ENCOUNTERCLASS) %>%
+  summarise(total_count = sum(encounter_count)) %>%
+  arrange(desc(total_count))
+
+# Reorder ENCOUNTERCLASS factor based on total counts
+encounters_summary$ENCOUNTERCLASS <- factor(
+  encounters_summary$ENCOUNTERCLASS,
+  levels = total_counts$ENCOUNTERCLASS
+)
+
+# Plot faceted line chart of encounters by hour and encounter type
+ggplot(encounters_summary, aes(x = as.numeric(hour), y = encounter_count)) +
+  geom_line(aes(color = ENCOUNTERCLASS), size = 1) +
+  geom_smooth(method = "lm", color = "black", se = FALSE, linetype = "dashed") +  # Add black trend line
+  labs(
+    title = "Hourly Trends in Encounter Types",
+    x = "Hour of Day",
+    y = "Encounter Count"
+  ) +
+  theme_minimal() +
+  scale_color_manual(values = custom_colors, guide = "none") +  # Remove legend
+  facet_wrap(~ ENCOUNTERCLASS, ncol = 5, nrow = 2, scales = "free_y") +  # 5x2 grid sorted by total count
+  theme(
+    strip.text = element_text(size = 10, face = "bold"),
+    axis.text.x = element_text(angle = 45, hjust = 1)
+  )
+```
+
+
+
+
+
